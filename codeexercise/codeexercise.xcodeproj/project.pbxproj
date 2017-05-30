@@ -15,6 +15,11 @@
 		8E0176081EDDB87500D7E2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0176061EDDB87500D7E2B7 /* LaunchScreen.storyboard */; };
 		8E0176131EDDB87500D7E2B7 /* codeexerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0176121EDDB87500D7E2B7 /* codeexerciseTests.m */; };
 		8E01761E1EDDB87500D7E2B7 /* codeexerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E01761D1EDDB87500D7E2B7 /* codeexerciseUITests.m */; };
+		8E01762F1EDDBC2A00D7E2B7 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E01762C1EDDBC2A00D7E2B7 /* TopicModel.m */; };
+		8E0176301EDDBC2A00D7E2B7 /* TopicsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E01762E1EDDBC2A00D7E2B7 /* TopicsManager.m */; };
+		8E0176331EDDBD3D00D7E2B7 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0176321EDDBD3D00D7E2B7 /* UserModel.m */; };
+		8E0176361EDDBE0B00D7E2B7 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0176351EDDBE0B00D7E2B7 /* Utils.m */; };
+		8E0176391EDDC11B00D7E2B7 /* MCBinaryHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0176381EDDC11B00D7E2B7 /* MCBinaryHeap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		8E0176191EDDB87500D7E2B7 /* codeexerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeexerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E01761D1EDDB87500D7E2B7 /* codeexerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = codeexerciseUITests.m; sourceTree = "<group>"; };
 		8E01761F1EDDB87500D7E2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E01762B1EDDBC2A00D7E2B7 /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
+		8E01762C1EDDBC2A00D7E2B7 /* TopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicModel.m; sourceTree = "<group>"; };
+		8E01762D1EDDBC2A00D7E2B7 /* TopicsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicsManager.h; sourceTree = "<group>"; };
+		8E01762E1EDDBC2A00D7E2B7 /* TopicsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicsManager.m; sourceTree = "<group>"; };
+		8E0176311EDDBD3D00D7E2B7 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		8E0176321EDDBD3D00D7E2B7 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		8E0176341EDDBE0B00D7E2B7 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8E0176351EDDBE0B00D7E2B7 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		8E0176371EDDC11B00D7E2B7 /* MCBinaryHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBinaryHeap.h; sourceTree = "<group>"; };
+		8E0176381EDDC11B00D7E2B7 /* MCBinaryHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBinaryHeap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,16 @@
 				8E0175FC1EDDB87500D7E2B7 /* AppDelegate.m */,
 				8E0175FE1EDDB87500D7E2B7 /* ViewController.h */,
 				8E0175FF1EDDB87500D7E2B7 /* ViewController.m */,
+				8E01762B1EDDBC2A00D7E2B7 /* TopicModel.h */,
+				8E0176371EDDC11B00D7E2B7 /* MCBinaryHeap.h */,
+				8E0176381EDDC11B00D7E2B7 /* MCBinaryHeap.m */,
+				8E01762C1EDDBC2A00D7E2B7 /* TopicModel.m */,
+				8E0176311EDDBD3D00D7E2B7 /* UserModel.h */,
+				8E0176321EDDBD3D00D7E2B7 /* UserModel.m */,
+				8E01762D1EDDBC2A00D7E2B7 /* TopicsManager.h */,
+				8E01762E1EDDBC2A00D7E2B7 /* TopicsManager.m */,
+				8E0176341EDDBE0B00D7E2B7 /* Utils.h */,
+				8E0176351EDDBE0B00D7E2B7 /* Utils.m */,
 				8E0176011EDDB87500D7E2B7 /* Main.storyboard */,
 				8E0176041EDDB87500D7E2B7 /* Assets.xcassets */,
 				8E0176061EDDB87500D7E2B7 /* LaunchScreen.storyboard */,
@@ -274,8 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0176001EDDB87500D7E2B7 /* ViewController.m in Sources */,
+				8E01762F1EDDBC2A00D7E2B7 /* TopicModel.m in Sources */,
+				8E0176331EDDBD3D00D7E2B7 /* UserModel.m in Sources */,
 				8E0175FD1EDDB87500D7E2B7 /* AppDelegate.m in Sources */,
+				8E0176391EDDC11B00D7E2B7 /* MCBinaryHeap.m in Sources */,
 				8E0175FA1EDDB87500D7E2B7 /* main.m in Sources */,
+				8E0176361EDDBE0B00D7E2B7 /* Utils.m in Sources */,
+				8E0176301EDDBC2A00D7E2B7 /* TopicsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
