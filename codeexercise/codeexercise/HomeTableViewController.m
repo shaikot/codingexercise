@@ -12,7 +12,7 @@
 #import "TopicsManager.h"
 #import "UIUtils.h"
 
-#define MaxNumberTopicsInHomepage       2
+#define MaxNumberTopicsInHomepage       20
 
 @interface HomeTableViewController ()
 @property (nonatomic, strong) NSArray *arrayList;
@@ -23,11 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     UIBarButtonItem *postTopicButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(postTopicButtonTapped:)];
     self.navigationItem.rightBarButtonItem = postTopicButton;
 
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 140;

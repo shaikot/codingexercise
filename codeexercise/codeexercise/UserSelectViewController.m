@@ -44,16 +44,13 @@
         UIViewController* homeTableViewController =[[UIStoryboard storyboardWithName:kStoryBoardOne bundle:nil] instantiateViewControllerWithIdentifier:kViewControllerHomeTableViewController];
         [self.navigationController pushViewController:homeTableViewController animated: YES];
     }else{
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Please enter with a username." preferredStyle:UIAlertControllerStyleAlert]; // 7
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Please enter a username." preferredStyle:UIAlertControllerStyleAlert]; 
         
         UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-            NSLog(@"You pressed button OK");
-        }]; // 8
+        }];
         
-        [alert addAction:defaultAction]; // 9
-        
-            
-        [self presentViewController:alert animated:YES completion:nil]; // 11
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
     }
 }
 
