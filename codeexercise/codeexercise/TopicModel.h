@@ -16,6 +16,9 @@
 @property (nonatomic) int downvote;
 @property (nonatomic) NSUInteger timestamp;
 
+
+- (void)incrementUpVote;
+- (void)incrementDownVote;
 - (NSComparisonResult)compare:(id _Nullable )otherTopic;
 
 

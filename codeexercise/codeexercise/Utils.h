@@ -11,4 +11,5 @@
 @interface Utils : NSObject
 
 +(NSUInteger) timestampInMilliseconds;
++(NSString*) numberFormat:(NSNumber*)number;
 @end

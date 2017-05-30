@@ -10,6 +10,14 @@
 
 @implementation TopicModel
 
+- (void)incrementUpVote{
+    [self setUpvote:[self upvote] + 1];
+}
+
+- (void)incrementDownVote{
+    [self setDownvote:[self downvote] + 1];
+}
+
 /**
  * comparing two topic object. It will be used by the sorting algorithm. First, the object will be compared with the upvote. If upvote is equal in both objects, the timestamp is considered to compare
  */
