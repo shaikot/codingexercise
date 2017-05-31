@@ -12,7 +12,7 @@
 #import "TopicsManager.h"
 #import "UIUtils.h"
 
-#define MaxNumberTopicsInHomepage            20
+#define MaxNumberTopicsInHomepage            @"NumberOfTopDisplayableTopicsInList"
 
 @interface HomeTableViewController ()
 @property (nonatomic, strong) NSArray *arrayList;
@@ -116,7 +116,7 @@
 */
 
 - (void) updateTableView{
-    _arrayList = [[TopicsManager sharedInstance] getKLargetUpvotedSortingList:MaxNumberTopicsInHomepage];
+    _arrayList = [[TopicsManager sharedInstance] getKLargetUpvotedSortingList:[[[NSBundle mainBundle] objectForInfoDictionaryKey:MaxNumberTopicsInHomepage] intValue]];
     [self.tableView reloadData];
 }
 
