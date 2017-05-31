@@ -12,10 +12,11 @@
 #import "TopicsManager.h"
 #import "UIUtils.h"
 
-#define MaxNumberTopicsInHomepage       20
+#define MaxNumberTopicsInHomepage            20
 
 @interface HomeTableViewController ()
 @property (nonatomic, strong) NSArray *arrayList;
+-(void) presentPublishViewController;
 - (void) updateTableView;
 @end
 
@@ -29,14 +30,18 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    // An approximate value of row height for initialization. But it will be modified on textview height.
     self.tableView.estimatedRowHeight = 140;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTableView) name:kNotificationUpdateTopicsTableViewControllerUpdateTableView object:nil];
+    //Updating tableview with new data
+    [self updateTableView];
+    if([_arrayList count] == 0){
+        [self presentPublishViewController];
+    }
 }
 
 - (void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //Updating tableview with new data
-    [self updateTableView];
 }
 
 
@@ -49,7 +54,7 @@
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [_arrayList count] > 0? 1: 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -115,14 +120,15 @@
     [self.tableView reloadData];
 }
 
-#pragma mark - IBAction
--(IBAction)postTopicButtonTapped :(id)sender {
-    
+-(void) presentPublishViewController{
     UIViewController* publishViewController =[[UIStoryboard storyboardWithName:kStoryBoardOne bundle:nil] instantiateViewControllerWithIdentifier:kViewControllerIDPublishViewController];
     [self presentViewController:publishViewController animated:YES completion:^{
         
     }];
-    
+}
+#pragma mark - IBAction
+-(IBAction)postTopicButtonTapped :(id)sender {
+    [self presentPublishViewController];
 }
 
 #pragma dealloc

@@ -10,7 +10,10 @@
 #import "TopicsManager.h"
 #import "Constants.h"
 
-@interface PublishViewController ()
+
+#define max_allowed_characters 255
+
+@interface PublishViewController () <UITextViewDelegate>
 @property (nonatomic, weak) IBOutlet UITextView *topicTextView;
 @property (nonatomic, weak) IBOutlet UILabel *displayNumberCharactersLabel;
 @end
@@ -48,6 +51,12 @@
     }];
 }
 
+- (IBAction)cancelButtonPressed:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
 #pragma textView delegate method
 
 - (void)textViewDidChange:(UITextView *)textView{
@@ -57,7 +66,11 @@
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
-    return textView.text.length + (text.length - range.length) <= 255;
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return textView.text.length + (text.length - range.length) <= max_allowed_characters;
 }
 
 @end

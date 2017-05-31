@@ -10,8 +10,7 @@
 #import "UIUtils.h"
 #import "UserModel.h"
 
-@interface UserSelectViewController ()
-@property (nonatomic, weak) IBOutlet UIButton *enterButton;
+@interface UserSelectViewController ()<UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField *userNameField;
 @end
 
@@ -27,6 +26,13 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];   //it hides
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if([[[UserModel sharedInstance] userName] length] > 0){
+        [_userNameField setPlaceholder:[NSString stringWithFormat:@"%@, try another username.", [[UserModel sharedInstance] userName]]];
+    }
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES]; // it shows
@@ -37,20 +43,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma textField delegate
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma IBAction section
 
 - (IBAction)enterButtonPressed:(id)sender{
+    NSString *userName = [[UserModel sharedInstance] userName];
     if([[_userNameField text] length] > 0){
+        userName = [_userNameField text];
         [[UserModel sharedInstance] setUserName:[_userNameField text]];
+        [_userNameField setText:@""];
+    }
+    if(userName){
         UIViewController* homeTableViewController =[[UIStoryboard storyboardWithName:kStoryBoardOne bundle:nil] instantiateViewControllerWithIdentifier:kViewControllerHomeTableViewController];
         [self.navigationController pushViewController:homeTableViewController animated: YES];
     }else{
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"Please enter a username." preferredStyle:UIAlertControllerStyleAlert]; 
-        
-        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
-        }];
-        
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        [UIUtils showAlertWithMessage:@"Please enter a username." title:@"" doneButtonText:@"Ok" viewController:self];
     }
 }
 

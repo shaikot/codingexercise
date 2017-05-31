@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UT7-M6-eEX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UT7-M6-eEX">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -25,14 +25,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start with a username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89n-l8-JXa">
-                                <rect key="frame" x="44.666666666666657" y="278" width="324.66666666666663" height="33"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Start with a username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89n-l8-JXa">
+                                <rect key="frame" x="44.666666666666657" y="278" width="324.66666666666663" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="89n-l8-JXa" secondAttribute="height" multiplier="49:5" id="IeQ-fX-bgZ"/>
                                 </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YVm-sT-I2S"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wI-qh-wOX">
                                 <rect key="frame" x="147.33333333333331" y="368" width="119.33333333333331" height="42"/>
@@ -49,7 +53,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.89239287745499463" green="0.97893441524118141" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5wI-qh-wOX" firstAttribute="width" secondItem="xZk-UY-iOK" secondAttribute="height" multiplier="108:667" id="0ev-Hg-xgZ"/>
                             <constraint firstItem="5wI-qh-wOX" firstAttribute="centerX" secondItem="xZk-UY-iOK" secondAttribute="centerX" id="Fab-zc-wEZ"/>
@@ -97,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.59623295023347911" green="0.67817858866977043" blue="0.72336632013320923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="topicReusableIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="topicReusableIdentifier" id="StS-o6-dOf" customClass="TopicTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="250"/>
@@ -233,7 +237,7 @@
                         <viewControllerLayoutGuide type="top" id="Hl3-K1-FsG"/>
                         <viewControllerLayoutGuide type="bottom" id="nUM-nh-p8f"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="buP-hg-CUD">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="buP-hg-CUD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -249,8 +253,8 @@
                                             <outlet property="delegate" destination="eKV-P6-ze7" id="CXA-8a-w7E"/>
                                         </connections>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="20" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7I-Ps-3Qg">
-                                        <rect key="frame" x="300" y="235.33333333333334" width="42" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="20" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7I-Ps-3Qg">
+                                        <rect key="frame" x="300" y="230.33333333333334" width="42" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -277,7 +281,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="publishButtonPressed:" destination="eKV-P6-ze7" eventType="touchUpInside" id="wCp-XI-Fiy"/>
+                                            <action selector="cancelButtonPressed:" destination="eKV-P6-ze7" eventType="touchUpInside" id="tkL-vu-8aV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -289,7 +293,7 @@
                                     <constraint firstItem="4Yg-8k-HxJ" firstAttribute="height" secondItem="UCZ-VF-bFr" secondAttribute="height" multiplier="0.65" id="OQ8-td-i9x"/>
                                     <constraint firstItem="UHT-nf-n5e" firstAttribute="top" secondItem="3BD-Sr-kai" secondAttribute="top" id="OSF-N0-1hV"/>
                                     <constraint firstItem="3BD-Sr-kai" firstAttribute="leading" secondItem="UCZ-VF-bFr" secondAttribute="centerX" constant="10" id="OpW-jA-etp"/>
-                                    <constraint firstItem="R7I-Ps-3Qg" firstAttribute="top" secondItem="4Yg-8k-HxJ" secondAttribute="bottom" constant="10" id="PeM-zV-NWn"/>
+                                    <constraint firstItem="R7I-Ps-3Qg" firstAttribute="top" secondItem="4Yg-8k-HxJ" secondAttribute="bottom" constant="5" id="PeM-zV-NWn"/>
                                     <constraint firstItem="4Yg-8k-HxJ" firstAttribute="leading" secondItem="UCZ-VF-bFr" secondAttribute="leading" constant="10" id="QCx-ra-BoP"/>
                                     <constraint firstItem="UHT-nf-n5e" firstAttribute="trailing" secondItem="UCZ-VF-bFr" secondAttribute="centerX" constant="-10" id="UHN-NX-t2h"/>
                                     <constraint firstItem="3BD-Sr-kai" firstAttribute="width" secondItem="UCZ-VF-bFr" secondAttribute="height" multiplier="91:300" id="WWr-rq-9Z1"/>
@@ -299,7 +303,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.91118126580000003" green="0.97472295180000001" blue="1" alpha="0.49312392979452052" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UCZ-VF-bFr" firstAttribute="centerY" secondItem="buP-hg-CUD" secondAttribute="centerY" id="1sQ-4W-rpv"/>
                             <constraint firstItem="UCZ-VF-bFr" firstAttribute="centerX" secondItem="buP-hg-CUD" secondAttribute="centerX" id="4eF-Vm-5Ov"/>

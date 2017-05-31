@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define kStoryBoardOne @"Main"
 
@@ -14,5 +15,7 @@
 #define kViewControllerHomeTableViewController     @"homeTableViewControllerID"
 
 @interface UIUtils : NSObject
+
++(void)showAlertWithMessage:(NSString*) message title:(NSString*) title doneButtonText:(NSString*)doneText viewController:(UIViewController*) viewController;
 
 @end

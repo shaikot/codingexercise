@@ -10,4 +10,14 @@
 
 @implementation UIUtils
 
++(void)showAlertWithMessage:(NSString*) message title:(NSString*) title doneButtonText:(NSString*)doneText viewController:(UIViewController*) viewController{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:doneText style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+    }];
+    
+    [alert addAction:defaultAction];
+    [viewController presentViewController:alert animated:YES completion:nil];
+}
+
 @end
