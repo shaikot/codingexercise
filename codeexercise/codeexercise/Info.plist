@@ -40,6 +40,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NumberOfTopDisplayableTopicsInList</key>
-	<integer>2</integer>
+	<integer>20</integer>
 </dict>
 </plist>
